@@ -1,0 +1,63 @@
+       
+      <div class="row">
+       	<div class="large-10 large-centered columns">
+	       		<div class="row">
+		       	<div class="large-4 columns text-right"><h4>Pick a category:</h4> </div>
+		       	<div class="large-8 columns">
+		       		<ul class="button-group">
+							  <li ng-repeat="category in thingCategories"><a href="#" class="tiny button">{{category.name}}</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+      </div>
+
+       <div class="row">
+            <div class="large-6 text-center columns">
+              <h2>Does... <span class="thingA name">{{thingA.name}}</span></h2>
+            </div>
+            <div class="large-6 text-center columns">
+              <h2>go with... <span class="thingB name">{{thingB.name}}?</span></h2>
+            </div>
+      </div>    
+      <div class="row">
+            <div class="large-6 text-center columns">
+              <img src="{{thingA.src || 'http://placehold.it/400x300&text=[img]'}}">
+            </div>
+            <div class="large-6 text-center columns">
+              <img src="{{thingB.src || 'http://placehold.it/400x300&text=[img]'}}">
+            </div>
+      </div>
+      <div class="row">
+            <div class="large-6 text-center columns">
+              <p class="thingA description">{{thingA.description}}</p>
+            </div>
+            <div class="large-6 text-center columns">
+              <p class="thingB description">{{thingB.description}}</p>
+            </div>
+      </div>
+      <div class="row">
+      	<div class="large-12 text-center columns">
+            <ul class="button-group">
+					  <li ng-repeat="category in thingRatings"><a ng-click="vote({{category.rating}})" class="button">{{category.name}}</a></li>
+					</ul>
+				</div>
+      </div>
+      <div>
+      </div>
+     
+     
+       
+    
+       
+     
+      <footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-6 columns">
+              <p>© Copyright {{siteOwner}} {{currentYear}}</p>
+            </div>
+          </div>
+        </div>
+      </footer>
